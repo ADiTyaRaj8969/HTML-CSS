@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffe6f0;
+}
+
+.container {
+    position: relative;
+    width: 400px;
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.form-container {
+    display: none;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.form-container.active {
+    display: block;
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-container button {
+    width: 100%;
+    padding: 10px;
+    background-color: #003566;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.form-container button:hover {
+    background-color: #00509e;
+}
+
+.forgot-password {
+    display: block;
+    text-align: right;
+    margin-bottom: 15px;
+    color: #00509e;
+    text-decoration: none;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+
+.form-container .alternative {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.form-container .alternative a {
+    color: #00509e;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.form-container .alternative a:hover {
+    text-decoration: underline;
+}
+
+.form-container .social-login {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.form-container .social-login button {
+    padding: 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #f9f9f9;
+    display: flex;
+    align-items: center;
+}
+
+.form-container .social-login button img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.form-container .social-login button:hover {
+    background: #f1f1f1;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

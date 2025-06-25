@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Age Check - Ternary Operator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f1f1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            width: 100px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background-color: #0e76a8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #095a86;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Check if you're old enough</h2>
+        <label for="ageInput">Enter your age:</label><br>
+        <input type="number" id="ageInput" placeholder="e.g. 18"><br>
+        <button onclick="checkAge()">Check</button>
+    </div>
+
+    <script>
+        function checkAge() {
+            let age = document.getElementById("ageInput").value;
+            age < 18 ? alert("Too young") : alert("Old enough");
+        }
+    </script>
+</body>
+</html>

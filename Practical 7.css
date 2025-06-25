@@ -1,0 +1,54 @@
+/* styles.css */
+
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* Container styling */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading style */
+h1 {
+    color: #4CAF50;
+}
+
+/* Paragraphs styling */
+.paragraphs {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+p.clickable {
+    background-color: #f0f0f0;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect */
+p.clickable:hover {
+    background-color: #e1e1e1;
+    transform: scale(1.05);
+}
+
+/* Active click effect */
+p.clickable:active {
+    transform: scale(0.98);
+}

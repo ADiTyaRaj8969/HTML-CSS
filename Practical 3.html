@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Quiz</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 700px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px #ccc;
+        }
+        h1 {
+            text-align: center;
+        }
+        .question {
+            margin-bottom: 20px;
+        }
+        .question h3 {
+            margin: 0 0 10px;
+        }
+        .options label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .submit-btn {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #0e76a8;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .submit-btn:hover {
+            background-color: #095a86;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Online Quiz</h1>
+        <form action="result.html" method="post">
+            
+            <div class="question">
+                <h3>1. What does HTML stand for?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a"> Hyper Trainer Marking Language</label>
+                    <label><input type="radio" name="q1" value="b"> HyperText Markup Language</label>
+                    <label><input type="radio" name="q1" value="c"> HighText Machine Language</label>
+                    <label><input type="radio" name="q1" value="d"> None of the above</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>2. Which tag is used for inserting an image?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a"> &lt;image&gt;</label>
+                    <label><input type="radio" name="q2" value="b"> &lt;img&gt;</label>
+                    <label><input type="radio" name="q2" value="c"> &lt;src&gt;</label>
+                    <label><input type="radio" name="q2" value="d"> &lt;pic&gt;</label>
+                </div>
+            </div>
+
+            <div class="question">
+                <h3>3. What is the correct HTML tag for the largest heading?</h3>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a"> &lt;h6&gt;</label>
+                    <label><input type="radio" name="q3" value="b"> &lt;head&gt;</label>
+                    <label><input type="radio" name="q3" value="c"> &lt;h1&gt;</label>
+                    <label><input type="radio" name="q3" value="d"> &lt;heading&gt;</label>
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Quiz</button>
+        </form>
+    </div>
+</body>
+</html>

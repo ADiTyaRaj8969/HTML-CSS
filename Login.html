@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login & Signup - Adaa</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function toggleForm(isSignUp) {
+            const loginForm = document.getElementById('login-form');
+            const signupForm = document.getElementById('signup-form');
+            if (isSignUp) {
+                loginForm.classList.remove('active');
+                signupForm.classList.add('active');
+            } else {
+                signupForm.classList.remove('active');
+                loginForm.classList.add('active');
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <!-- Login Form -->
+        <div class="form-container active" id="login-form">
+            <h1>Welcome to Adaa</h1>
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@email.com">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="At least 8 characters">
+
+            <a href="#" class="forgot-password">Forgot Password?</a>
+
+            <button type="submit">Sign In</button>
+
+            <div class="alternative">Or</div>
+
+            <div class="social-login">
+                 <button style="color:black;"><img src="google-color-svgrepo-com.svg" alt="Google">Sign in with Google</button>
+                <button style="color:black;"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"> Sign in with Facebook</button>
+            </div>
+
+            <div class="alternative">
+                Don’t have an account? <a onclick="toggleForm(true)">Create account</a>
+            </div>
+        </div>
+
+        <!-- Signup Form -->
+        <div class="form-container" id="signup-form">
+            <h1>Create an Account - Adaa</h1>
+            <label for="username">User Name</label>
+            <input type="text" id="username" placeholder="Your name">
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="example@email.com">
+
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="At least 8 characters">
+
+            <label for="phone">Phone Number</label>
+            <input type="text" id="phone" placeholder="+91 xxxxx xxxxx">
+
+            <button type="submit">Register</button>
+
+            <div class="alternative">Or</div>
+
+            <div class="social-login">
+               <button style="color:black;"><img src="google-color-svgrepo-com.svg" alt="Google">Sign in with Google</button>
+                <button style="color:black;"><img src="facebook-color-svgrepo-com.svg" alt="Facebook"> Sign in with Facebook</button>
+            </div>
+
+            <div class="alternative">
+                Already have an account? <a onclick="toggleForm(false)">Sign in</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

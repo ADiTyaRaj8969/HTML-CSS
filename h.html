@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-R Diagram</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+        }
+        svg {
+            border: 1px solid black;
+            background-color: white;
+        }
+        text {
+            font-family: Arial, sans-serif;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <svg width="800" height="600">
+        <!-- Customer & Account -->
+        <rect x="50" y="50" width="120" height="60" stroke="black" fill="lightblue"/>
+        <text x="70" y="80">Customer</text>
+        <rect x="250" y="50" width="120" height="60" stroke="black" fill="lightgreen"/>
+        <text x="270" y="80">Account</text>
+        <line x1="170" y1="80" x2="250" y2="80" stroke="black"/>
+        <text x="180" y="70">Owns</text>
+
+        <!-- Customer & Loan -->
+        <rect x="50" y="150" width="120" height="60" stroke="black" fill="lightblue"/>
+        <text x="70" y="180">Customer</text>
+        <rect x="250" y="150" width="120" height="60" stroke="black" fill="lightcoral"/>
+        <text x="270" y="180">Loan</text>
+        <line x1="170" y1="180" x2="250" y2="180" stroke="black"/>
+        <text x="180" y="170">Takes</text>
+
+        <!-- Doctor & Patient -->
+        <rect x="50" y="250" width="120" height="60" stroke="black" fill="lightyellow"/>
+        <text x="70" y="280">Doctor</text>
+        <rect x="250" y="250" width="120" height="60" stroke="black" fill="lightpink"/>
+        <text x="270" y="280">Patient</text>
+        <line x1="170" y1="280" x2="250" y2="280" stroke="black"/>
+        <text x="180" y="270">Treats</text>
+
+        <!-- Student & Project -->
+        <rect x="50" y="350" width="120" height="60" stroke="black" fill="lightgray"/>
+        <text x="70" y="380">Student</text>
+        <rect x="250" y="350" width="120" height="60" stroke="black" fill="lightsalmon"/>
+        <text x="270" y="380">Project</text>
+        <line x1="170" y1="380" x2="250" y2="380" stroke="black"/>
+        <text x="180" y="370">Works On</text>
+
+        <!-- Student & Teacher -->
+        <rect x="50" y="450" width="120" height="60" stroke="black" fill="lightgray"/>
+        <text x="70" y="480">Student</text>
+        <rect x="250" y="450" width="120" height="60" stroke="black" fill="lightseagreen"/>
+        <text x="270" y="480">Teacher</text>
+        <line x1="170" y1="480" x2="250" y2="480" stroke="black"/>
+        <text x="180" y="470">Guides</text>
+    </svg>
+</body>
+</html> 

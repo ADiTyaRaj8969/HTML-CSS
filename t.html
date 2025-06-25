@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Checker</title>
+</head>
+<body>
+    <h2>Check if you are old enough</h2>
+    <label for="dob">Enter your Date of Birth:</label>
+    <input type="date" id="dob">
+    <button onclick="checkAge()">Check</button>
+    
+
+    <script>
+        function checkAge() {
+            // Get the user's date of birth
+            let dob = document.getElementById("dob").value;
+
+            // Convert the date of birth to a Date object
+            let dobDate = new Date(dob);
+
+            // Get the current date
+            let today = new Date();
+
+            // Calculate age by subtracting birth year from current year
+            let age = today.getFullYear() - dobDate.getFullYear();
+
+            // Adjust age if the birthday hasn't occurred yet this year
+            let monthDiff = today.getMonth() - dobDate.getMonth();
+            if (monthDiff < 0 || (monthDiff === 0 && today.getDate() < dobDate.getDate())) {
+                age--;
+            }
+
+            // Use ternary operator to determine the message
+            let message = (age < 18) ? "Too Young" : "Old Enough";
+
+            // Display result in the alert box
+            alert(`You are ${age} years old. ${message}`);
+        }
+    </script>
+</body>
+</html>
